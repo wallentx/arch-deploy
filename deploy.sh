@@ -2,7 +2,7 @@
 # Deploy these dotfiles to your setup.
 
 if [[ $EUID -eq 1000 ]]; then
-	sudo pacman -S base-devel fakeroot jshon expac git &&
+	sudo pacman -S base-devel fakeroot jshon expac git wget&&
 	wget https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=packer &&
 	mv PKGBUILD\?h\=packer PKGBUILD &&
 	makepkg &&
